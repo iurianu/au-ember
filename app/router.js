@@ -12,8 +12,8 @@ Router.map(function () {
   this.route('about');
   this.route('authors', { path: '/articles/authors' });
   this.route('articles', function () {
-    this.route('author', { path: '/authors/:id' });
-    this.route('page', { path: '/page/:id' });
+    this.route('author', { path: '/author/:id' });
+    this.route('page',   { path: '/page/:id' });
     this.route('single', { path: '/:id' });
   });
   this.route('not-found', { path: '/*path' });

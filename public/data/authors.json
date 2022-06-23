@@ -1,13 +1,19 @@
-{"authors": [
+{"data": [
         {
             "id": "1",
-            "name": "John Doe",
-            "username": "john"
+            "type": "authors",
+            "attributes": {
+                "name": "John Doe",
+                "username": "john"
+            }
         },
         {
             "id": "2",
-            "name": "Jane Miller",
-            "username": "jane"
+            "type": "authors",
+            "attributes": {
+                "name": "Jane Miller",
+                "username": "jane"
+            }
         }
     ]
 }
