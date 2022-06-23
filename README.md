@@ -20,9 +20,8 @@ This README outlines the details of collaborating on this Ember application.
 2. `ember install ember-data-table` - an add-on used together with appuniversum
 3. `ember install @appuniversum/ember-appuniversum`
 4. `ember install ember-cli-autoprefixer` - a dependency required by AU
-5. `ember install ember-hash-helper-polyfill`
-6. Change `style.css` to `style.scss`, and configure the folder structure for SCSS partials
-7. Add the following lines to your `ember-cli-build.js` file
+5. Change `style.css` to `style.scss`, and configure the folder structure for SCSS partials
+6. Add the following lines to your `ember-cli-build.js` file
 
 ```javascript
 
@@ -39,18 +38,5 @@ module.exports = function (defaults) {
   });
 
   return app.toTree()
-
-```
-
-Create EDT adapter in the app
-Also add it in the route - import EDT mixin, and extend the route with EDT mixin
-
-```javascript
-
-import Route from '@ember/routing/route';
-import DataTableRouteMixin from 'ember-data-table/mixins/route';
-
-export default class AuthorRoute extends Route.extend(DataTableRouteMixin) {
-  modelName = 'author';}
 
 ```
