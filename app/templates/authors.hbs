@@ -1,0 +1,14 @@
+{{page-title "Authors"}}
+<main>
+    {{#each @model as |user|}}
+        <article itemid='author-{{user.id}}' itemscope itemtype="http://schema.org/Person" class="d-flex">
+            <h2 itemprop="name" class="w-100">
+                <LinkTo @route="articles.author" @model={{user.id}}>
+                    <span itemprop="additionalName">{{user.username}}</span> 
+                    <small>(<span itemprop="name">{{user.name}}</span>)</small>
+                </LinkTo>
+            </h2>             
+        </article>
+    {{/each}}
+    </main>
+{{outlet}}

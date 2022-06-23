@@ -1,0 +1,18 @@
+{{page-title "Single"}}
+
+<main class="articles-single">
+
+    {{#each @model as |item|}}
+        <article itemid='post-{{item.id}}' itemscope itemtype="http://schema.org/Article">
+            <h2 itemprop="name">{{item.title}}</h2>
+            <h3 itemprop="author" itemscope itemtype="http://schema.org/Person">
+                By: {{item.author.username}} 
+                <small style="font-weight: normal">
+                    ({{item.author.name}})
+                </small>
+            </h3>
+            <blockquote itemprop="text">{{item.content}}</blockquote>
+        </article>
+    {{/each}}
+    
+</main>

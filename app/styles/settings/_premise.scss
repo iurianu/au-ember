@@ -1,0 +1,41 @@
+html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    @extend .au-u-font;
+}
+
+$au-header-height: 46px;
+$au-footer-height: 140px;
+$au-main-height: calc(100vh - ($au-header-height + $au-footer-height));
+
+%au-component-fix-mix {
+    position: fixed;
+    width: 100vw;
+    left: 0;
+}
+
+.au-c-main-header {    
+    @extend %au-component-fix-mix;
+    height: $au-header-height; 
+    top: 0;   
+}
+
+.au-c-main-footer {
+    @extend %au-component-fix-mix;
+    min-height: $au-footer-height;
+    bottom: 0;
+}
+
+main {
+    margin-top: $au-header-height;
+    margin-bottom: $au-footer-height;
+    min-height: $au-main-height;
+    padding: 1vh 1rem;
+}
+
+[role=banner] {
+    margin-top: $au-header-height
+}

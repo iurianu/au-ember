@@ -1,15 +1,11 @@
 # au-crud-app
 
 This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
 
 ## Prerequisites
 
-You will need the following things properly installed on your computer.
-
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://cli.emberjs.com/release/)
+* [Node.js](https://nodejs.org/) v.14.17.3
+* [Ember CLI](https://cli.emberjs.com/release/) v.4.4.0
 * [Google Chrome](https://google.com/chrome/)
 
 ## Installation
@@ -18,39 +14,43 @@ You will need the following things properly installed on your computer.
 * `cd au-crud-app`
 * `npm install`
 
-## Running / Development
+## Install, and configure appuniversum
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+1. `ember install ember-cli-sass` - installs node-sass in the project (required by AU)
+2. `ember install ember-data-table` - an add-on used together with appuniversum
+3. `ember install @appuniversum/ember-appuniversum`
+4. `ember install ember-cli-autoprefixer` - a dependency required by AU
+5. `ember install ember-hash-helper-polyfill`
+6. Change `style.css` to `style.scss`, and configure the folder structure for SCSS partials
+7. Add the following lines to your `ember-cli-build.js` file
 
-### Code Generators
+```javascript
 
-Make use of the many generators for code, try `ember help generate` for more details
+module.exports = function (defaults) {
+  let app = new EmberApp(defaults, {
++   autoprefixer: {
++     cascade: false,
++   },
++   sassOptions: {
++     sourceMap: true,
++     extension: 'scss',
++     includePaths: ['node_modules/@appuniversum/appuniversum'],
++   },
+  });
 
-### Running Tests
+  return app.toTree()
 
-* `ember test`
-* `ember test --server`
+```
 
-### Linting
+Create EDT adapter in the app
+Also add it in the route - import EDT mixin, and extend the route with EDT mixin
 
-* `npm run lint`
-* `npm run lint:fix`
+```javascript
 
-### Building
+import Route from '@ember/routing/route';
+import DataTableRouteMixin from 'ember-data-table/mixins/route';
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+export default class AuthorRoute extends Route.extend(DataTableRouteMixin) {
+  modelName = 'author';}
 
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://cli.emberjs.com/release/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+```

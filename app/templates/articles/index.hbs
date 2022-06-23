@@ -1,0 +1,25 @@
+{{page-title "Index"}}
+<main class="articles-index">
+    <section class="container posts">
+
+    <div class="d-flex" style="display:none">
+        {{#each @model.allArticles as |item|}}
+        <article itemid='post-{{item.id}}' itemscope itemtype="http://schema.org/Article" class="post card">
+            <div class="card-body">
+                <h5 itemprop="name" class="card-title">
+                    <LinkTo @route="articles.single" @model={{item.id}}>{{item.title}}</LinkTo>
+                </h5>
+                <h6 itemprop="author" itemscope itemtype="http://schema.org/Person" class="card-subtitle">
+                    By: 
+                    <LinkTo @route="articles.author" @model={{item.author.id}}>{{item.author.username}}</LinkTo>&nbsp;
+                    <small style="font-weight: normal">({{item.author.name}})</small>            
+                </h6>
+                <p class="card-text crop">{{item.content}}</p>
+            </div>
+        </article>
+        {{/each}}
+    </div>
+</section>
+
+</main>
+{{outlet}}

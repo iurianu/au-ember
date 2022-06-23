@@ -1,0 +1,7 @@
+.au-content-header {
+    height: 100px;
+    @include media-min-1200px {
+        height: 154px;
+    }
+
+}

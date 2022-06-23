@@ -1,0 +1,29 @@
+<AuMainHeader
+    @brandLink='/'
+    @appTitle={{this.appTitle}}
+    @homeRoute={{this.homeRoute}}
+    @contactRoute={{this.contactRoute}}
+>
+  <ul class="au-c-list-navigation">
+    <li class="au-c-list-navigation__item">
+      <AuNavigationLink @route='articles'>
+        Articles
+      </AuNavigationLink>
+    </li>
+    <li class="au-c-list-navigation__item">
+      <AuNavigationLink @route='about'>
+        About
+      </AuNavigationLink>
+    </li>
+    <li class="au-c-list-navigation__item">
+      <AuNavigationLink @route='contact'>
+        Contact
+      </AuNavigationLink>
+    </li>
+  </ul>
+  <AuDropdown @title="Account" @buttonLabel="Account settings" @alignment="right">
+    <AuButton @skin="tertiary" role="menuitem">
+      <AuIcon @icon="logout" @alignment="left" />Logout
+    </AuButton>
+  </AuDropdown>
+</AuMainHeader>

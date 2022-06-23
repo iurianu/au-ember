@@ -1,0 +1,13 @@
+.au-c-list-navigation {
+    flex-wrap: nowrap;
+}
+
+.au-c-dropdown__toggle {
+    margin-left: 1.5rem;
+}
+
+.au-c-dropdown__menu {
+    &.is-visible {
+        right: -.75rem;
+    }
+} 

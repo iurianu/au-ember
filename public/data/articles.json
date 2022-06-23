@@ -1,0 +1,27 @@
+{ "articles": [
+        {
+            "id": "1",
+            "title": "First Test Article",
+            "content": "When a party is suggested, the trio remembers the disaster that occurred when three of Jane's friends arrived to rescue her, as they mistakenly believed Jane was being held captive in the jungle. After learning the truth, they decide to stay for a visit. Jane organizes an English-style picnic for her friends, but Tarzan refuses to join them after believing Jane was embarrassed by his savage habits. The picnic is interrupted when two panthers, Nuru and Sheeta attack Jane and her friends, forcing them to flee into the deeper regions of the jungle. As Jane taught her friends a few survival techniques, they are once again ambushed by the panthers, only to be saved when Tarzan rushes in. When Jane and her friends leave the next day, they thank her for the adventure and say they hope to come back soon.",
+            "userId": "1"
+        },
+        {
+            "id": "2",
+            "title": "Second Test Article",
+            "content": "Having run out of ideas and realizing anniversaries would not fit in with Tarzan's uncivilized lifestyle, Jane returns to the treehouse in disappointment, only to cheer up after finding it decorated and everyone, including Tarzan, who is wearing his father's suit, had planned a surprise party to make her happy. Terk, Tantor, and the Professor had known about it all along and were simply distracting her while everyone else got the party set up. Tarzan gives Jane a diamond ring made from the same diamonds in the volcano. The celebrations start as everyone dances, including Tarzan and Jane as the movie concludes with the couple dancing under the moonlight with fireflies all around.",
+            "userId": "2"
+        },
+        {
+            "id": "3",        
+            "title": "Third Test Article",
+            "content": "Professor Porter then joins the conversation, suggesting to Jane that she and Tarzan should celebrate their anniversary with a dance. This causes Terk to bring up the time Jane's old friend Robert Canler visited. Things had gone well, despite Tarzan feeling jealous and mistrusting towards Canler (claiming that he is a bad man that reminds him of Sabor), until Canler had revealed he was working as a double agent for the Germans of the German Empire during World War I and had come for a code machine disguised as a music box he gave to Jane for safekeeping. He then kidnapped her, but was tracked down and stopped by Tarzan assisted by RAF pilot Nigel Taylor, who had been on Canler's trail. Taylor commandeers Canler's plane and takes him back to England to stand trial.",
+            "userId": "2"
+        },
+        {
+            "id": "4",
+            "title": "Fourth Test Article",
+            "content": "Back to the present day, Jane ponders over the idea of expensive gifts, particularly jewelry, prompting Terk to remind her of the time Tarzan tried to get her a diamond. Tarzan had led two men, Johannes Niels and Merkus to a nearby volcano containing a diamond mine and in return, they would give him one of the diamonds to give to Jane, only for them to turn on him once inside, wanting to take all the diamonds for themselves. The volcano then erupted with Tarzan, Jane, and Professor Porter trapped inside, though they managed to escape before the lava flows reached them. Tarzan then rescued Johannes and Merkus, only for them to lose their diamonds in the process. They are arrested after this and taken back to England.",
+            "userId": "1"
+        }
+    ]
+}
